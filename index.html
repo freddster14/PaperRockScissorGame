@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const options = ['Rock',  'Paper',  'Scissors'];
+        let playerSelection = prompt("Enter Rock, Paper, or Scissors to try win. 'Best of 5'", "");
+        playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
+
+        function playRound(playerSelection, computerSelection){ 
+            if(playerSelection == 'Rock' && computerSelection == 'Paper') {
+            return "You Lose! Paper beats Rock"
+           } else if(playerSelection == 'Paper' && computerSelection == 'Scissors'){
+            return "You lost! Scissors cuts Paper"
+           } else if (playerSelection == 'Scissors' && computerSelection == 'Rock'){
+            return "You Lose! Rock crushes Scissors" 
+           } else if(playerSelection == computerSelection){
+            return "It's a tie! Try again"
+           } else if(!(playerSelection == 'Rock' || playerSelection == 'Paper' || playerSelection == 'Scissors')){
+            return noAnswer()
+           }else {
+            return "You win!"
+           }
+          
+            
+        }
+        let noAnswer = function(){
+            if(playerSelection != options)
+            return "Enter Rock, Paper, or Scissors to play!";
+        };
+        function getComputerChoice(){
+            return options[Math.floor(Math.random()*options.length)]
+        }
+        function game(playRound){
+            for (let i = 0; i < 5; i++);
+        }
+        
+        
+        const computerSelection = getComputerChoice()
+        console.log("P1: "+playerSelection+ " VS COM: "+computerSelection)
+        console.log(playRound(playerSelection, computerSelection))
+
+    </script>
+</body>
+</html>
