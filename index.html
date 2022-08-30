@@ -12,21 +12,20 @@
         let result = 0;
         function playRound(playerSelection, computerSelection){ 
             if(playerSelection == 'Rock' && computerSelection == 'Paper') {
-                points++;
+                ++points;
                 return "You Lose! Paper beats Rock " ;    
            } else if(playerSelection == 'Paper' && computerSelection == 'Scissors'){
-                points++;
+                ++points;
                 return "You lost! Scissors cuts Paper ";
            } else if (playerSelection == 'Scissors' && computerSelection == 'Rock'){
-                points++;
+                ++points;
                 return "You Lose! Rock crushes Scissors ";
            } else if(playerSelection == computerSelection){
                 return "It's a tie! Try again ";
            } else if(!(playerSelection == 'Rock' || playerSelection == 'Paper' || playerSelection == 'Scissors')){
-            alert("Enter a correct response!");
-                return "Try Again! "
+                return "Type your response correctly!"
            }else {
-                result++;
+                ++result;
                 return "You win! "
            } 
         }
@@ -46,7 +45,9 @@
                 console.log("P1: "+playerSelection+ " VS COM: "+computerSelection);
                 console.log(playRound(playerSelection, computerSelection));
                 console.log(score(points, result))
-                if(result == 3 && 3 >= i){
+                if(!(playerSelection == 'Rock' || playerSelection == 'Paper' || playerSelection == 'Scissors')){
+                --i;
+                }else if(result == 3 && 3 >= i){
                    return console.log('You must be hacking!!')
                 }else if(points == 3 && 3 >= i){
                     return console.log('Wow you suck!!')
