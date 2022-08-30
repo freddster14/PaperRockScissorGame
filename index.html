@@ -31,9 +31,7 @@
            }else {
             result++;
             return "You win!"
-           }
-          
-            
+           } 
         }
         let noAnswer = function(){
             if(playerSelection != options)
@@ -47,15 +45,10 @@
                 return "You Lose! Don't try again"
             } else if(result == 5){
                 return "Wow you did! Barely..."
-            } else{
-                
-               return "COM Score: "+points+"; P1 Score: "+result;
-               
+            } else{ 
+               return "COM Score: "+points+"; P1 Score: "+result; 
             }
-            
         }
-        
-        
         const computerSelection = getComputerChoice()
         console.log("P1: "+playerSelection+ " VS COM: "+computerSelection)
         console.log(playRound(playerSelection, computerSelection));
