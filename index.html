@@ -8,51 +8,56 @@
 </head>
 <body>
     <script>
-        const options = ['Rock',  'Paper',  'Scissors'];
-        let playerSelection = prompt("Enter Rock, Paper, or Scissors to try win. 'Best of 5'", "");
-        playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
+        
         let points = 0;
         let result = 0;
         function playRound(playerSelection, computerSelection){ 
             if(playerSelection == 'Rock' && computerSelection == 'Paper') {
                 points++;
-                return "You Lose! Paper beats Rock";    
+                return "You Lose! Paper beats Rock " ;    
            } else if(playerSelection == 'Paper' && computerSelection == 'Scissors'){
             points++;
-            return "You lost! Scissors cuts Paper";
+            return "You lost! Scissors cuts Paper ";
            } else if (playerSelection == 'Scissors' && computerSelection == 'Rock'){
             points++;
-            return "You Lose! Rock crushes Scissors";
+            return "You Lose! Rock crushes Scissors ";
            } else if(playerSelection == computerSelection){
             
-            return "It's a tie! Try again";
+            return "It's a tie! Try again ";
            } else if(!(playerSelection == 'Rock' || playerSelection == 'Paper' || playerSelection == 'Scissors')){
-            return noAnswer()
+            alert("Enter a correct response!");
+            return "Try Again! "
            }else {
             result++;
-            return "You win!"
+            return "You win! "
            } 
         }
-        let noAnswer = function(){
-            if(playerSelection != options)
-            return "Enter Rock, Paper, or Scissors to play!";
-        };
+        function score(points, result){
+            let score = 0;
+            return "Player Score: "+result+" COM Score: "+points
+        }
         function getComputerChoice(){
+            const options = ['Rock',  'Paper',  'Scissors'];
             return options[Math.floor(Math.random()*options.length)]
         }
-        function game(result, points){
-            if (points == 5){
-                return "You Lose! Don't try again"
-            } else if(result == 5){
-                return "Wow you did! Barely..."
-            } else{ 
-               return "COM Score: "+points+"; P1 Score: "+result; 
+        function game(){
+            for(let i = 0; i < 5; i++){
+                const computerSelection = getComputerChoice()
+                let playerSelection = prompt("Enter Rock, Paper, or Scissors to try win. 'Best of 5'", "");
+                playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
+                console.log("P1: "+playerSelection+ " VS COM: "+computerSelection);
+                console.log(playRound(playerSelection, computerSelection));
+                console.log(score(points, result))
             }
+            if(points < result){
+                console.log('You are the winner!!!!!!')
+            }else if(points > result){
+            console.log('You suck! Try again!!!!!!')
+            }else if (result == 0 || points == 0){
+                alert('Enter Rock, Paper, or Scissors to play.')
+            }else{console.log('It\'s a tie!!!!')}
         }
-        const computerSelection = getComputerChoice()
-        console.log("P1: "+playerSelection+ " VS COM: "+computerSelection)
-        console.log(playRound(playerSelection, computerSelection));
-        console.log(game(result, points))
+        console.log(game())
 
     </script>
 </body>
