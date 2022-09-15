@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>RPS!!!</title>
 </head>
 <body>
-  
-  
-  
+    <div class="page">
+        <div class="header">You VS Bot</div>
+        <div class="results"></div>
+            <div id="resultScore">
+                <div class="scorePlayer">Player:
+                    <span id="result">0</span>
+                </div>
+                <div class="scoreComputer">Computer:
+                    <span id="points">0</span>
+                </div>
+            </div>
+            <div class="choose">Choose Your Option</div>
+            <div class="buttons">
+                <input type="image" src='/images/rock.svg' id="rock">
+                <input type="image" src="/images/" id="paper">
+                <input type="image" src="/images/" id="scissors">
+            </div>
+            <span class="textResult">Outcome</span>
+            <div class="container">
+                <div id="playerOption"></div>
+                <div id="computerOption"></div>
+            </div>
+    </div>
   
     <script src="index.js" defer></script>
 </body>
