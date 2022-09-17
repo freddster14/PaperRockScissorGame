@@ -24,20 +24,31 @@ body{
     font-size: 28px;
     margin-top: 10px;
 }
-button{
+input{
     font-size: 30px;
     border-radius: 25px;
     padding: 1px 15px;
-    
+    width: 100px;
+    height: 100px;
+    transition: all 0.08s ease-in;
+}
+input:active{
+    transform: translate(3px, 4px);
 }
 .buttons{
     display: flex;
+    flex-wrap: wrap;
     gap: 25px;
-    justify-content: space-around;
-
+    justify-content: center;
+    margin: 30px 0px;
+    height: auto;
+    width: auto;
 }
 #rock{
-    width: 100px;
-    height: 100px;
+    margin-left: 5px;
+
+}
+.textResult{
+    font-size: 25px;
 
 }
