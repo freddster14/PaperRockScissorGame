@@ -26,7 +26,6 @@ body{
 }
 input{
     font-size: 30px;
-    padding: 1px 15px;
     width: 100px;
     height: 100px;
     transition: all 0.08s ease-in;
@@ -52,6 +51,6 @@ input:active{
 
 }
 #paper{
-    width: 75px;
-    height: 75px;
+    width: 85px;
+    height: 85px;
 }
