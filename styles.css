@@ -17,7 +17,7 @@ body{
 }
 #resultScore{
     display: flex;
-    gap: 10px;
+    gap: 20px;
     font-size: 20px;
 }
 .choose{
@@ -26,7 +26,6 @@ body{
 }
 input{
     font-size: 30px;
-    border-radius: 25px;
     padding: 1px 15px;
     width: 100px;
     height: 100px;
@@ -51,4 +50,8 @@ input:active{
 .textResult{
     font-size: 25px;
 
+}
+#paper{
+    width: 75px;
+    height: 75px;
 }
