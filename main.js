@@ -19,7 +19,6 @@ let points = 0;
 let playerPoints = 0;
 let choose = '';
 
-
 function playRound(playerSelection, computerSelection){ 
     const computerChoice = getComputerChoice();
     const playerChoice= getPlayerChoice();
