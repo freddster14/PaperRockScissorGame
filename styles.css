@@ -17,8 +17,15 @@ body{
 }
 #resultScore{
     display: flex;
-    gap: 50px;
     font-size: 20px;
+    justify-content: space-around;
+}
+.scoreComputer{
+    margin-left: 15px;
+}
+.scorePlayer{
+   margin-right: 20px;
+   padding-right: 10px;
 }
 .choose{
     font-size: 28px;
