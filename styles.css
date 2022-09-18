@@ -19,6 +19,7 @@ body{
     display: flex;
     font-size: 20px;
     justify-content: space-around;
+    margin-right: 12px;
 }
 .scoreComputer{
     margin-left: 15px;
