@@ -79,4 +79,5 @@ input:active{
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
