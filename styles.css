@@ -53,11 +53,13 @@ input:active{
 #rock{
     margin-left: 5px;
     width: 115px;
+    height: 100px;
 
 }
 #scissors{
     height: 115px;
     margin-top: -10px;
+    width: 100px;
 }
 .textResult{
     font-size: 25px;
@@ -66,4 +68,15 @@ input:active{
 #paper{
     width: 85px;
     height: 85px;
+}
+.container{
+    display: flex;
+    width: 250px;
+    
+}
+#playerOption{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
 }

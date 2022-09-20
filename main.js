@@ -3,14 +3,14 @@ const currentPoints = document.getElementById('points');
 const outcome = document.querySelector('.textResult');
 
 const player = document.querySelector('.buttons');
-player.addEventListener('click', e => playRound());
+player.addEventListener('click', e => {playRound(); displayImg()});
 
 
 const rockButton = document.querySelector('#rock');
 rockButton.addEventListener("click", (e) => choose = 'Rock');
 
 const paperButton = document.querySelector('#paper');
-paperButton.addEventListener('click', (e) => choose = 'Paper')
+paperButton.addEventListener('click', (e) => choose = 'Paper');
 
 const scissorsButton = document.querySelector('#scissors');
 scissorsButton.addEventListener("click", (e) => choose = 'Scissors');
@@ -21,7 +21,7 @@ let choose = '';
 
 function playRound(playerSelection, computerSelection){ 
     const computerChoice = getComputerChoice();
-    const playerChoice= getPlayerChoice();
+    const playerChoice = choose;
     if(playerChoice == 'Rock' && computerChoice == 'Paper') {
         currentPoints.textContent = ++points;
         outcome.textContent = "You lose!" ;    
@@ -32,6 +32,8 @@ function playRound(playerSelection, computerSelection){
         currentPoints.textContent = ++points;
         outcome.textContent = "You lose!";
    } else if(playerChoice == computerChoice){
+        currentPoints.textContent = ++points;
+        currentResult.textContent = ++playerPoints
         outcome.textContent = "It's a tie!";
    } else if(!(playerChoice == 'Rock' || playerChoice == 'Paper' || playerChoice == 'Scissors')){
         outcome.textContent = "ERROR"
@@ -40,23 +42,32 @@ function playRound(playerSelection, computerSelection){
         outcome.textContent = "You win!"
    } 
 }
-const playerOutcome = document.querySelector('.playerOption')
-const computerOutcome = document.querySelector('.computerOption')
+const playerOutcome = document.querySelector('#playerOption')
+
+const computerOutcome = document.querySelector('#computerOption')
 function displayImg(){
-    
+    if(choose == 'Rock'){
+        let img = document.createElement('img');
+        img.src = "images/rock.png";
+        img.id = "rock"
+        playerOutcome.appendChild(img)
+    }else if(choose == 'Paper'){
+        let img = document.createElement('img');
+        img.src = "images/paper.png";
+        img.id = "paper"
+        playerOutcome.appendChild(img)
+    }else{
+        let img = document.createElement('img');
+        img.src = "images/scissors.png";
+        img.id = "scissors"
+        playerOutcome.appendChild(img)
+    }
 }
 function getComputerChoice(){
     const optionsArray = ['Rock',  'Paper',  'Scissors'];
     return optionsArray[Math.floor(Math.random()*optionsArray.length)]
 }
-function getPlayerChoice(){
-    if(choose === 'Rock'){
-        playerOutcome
-        return 'Rock'
-    }else if(choose === 'Paper'){
-        return 'Paper'
-    }else{return 'Scissors'}
-}
+
 
 function game(){
     if(points === 5){
