@@ -10,28 +10,30 @@
 <body>
     <div class="page">
         <div class="header">You VS Bot</div>
-        <div class="results"></div>
-            <div id="resultScore">
-                <div class="scorePlayer">Player:
-                    <span id="result">0</span>
+            <div class="gameContainer">
+                <div class="info">First to five wins!</div>
+                <div id="resultScore">
+                    <div class="scorePlayer">Player:
+                            <span id="result">0</span>
+                    </div>
+                    <div class="scoreComputer">Bot:
+                        <span id="points">0</span>
+                    </div>
                 </div>
-                <div class="scoreComputer">Bot:
-                    <span id="points">0</span>
+                <div class="choose">Choose Your Option</div>
+                <div class="buttons">
+                    <input type="image" src="images/rock.png" id="rock">
+                    <input type="image" src="images/paper.png" id="paper">
+                    <input type="image" src="images/scissors.png" id="scissors">
                 </div>
-            </div>
-            <div class="choose">Choose Your Option</div>
-            <div class="buttons">
-                <input type="image" src="images/rock.png" id="rock">
-                <input type="image" src="images/paper.png" id="paper">
-                <input type="image" src="images/scissors.png" id="scissors">
-            </div>
-            <span class="textResult">Outcome</span>
-            <div class="container">
-                <div id="playerOption"></div>
-                <div id="computerOption"></div>
-            </div>
-    </div>
-  
+                <span class="textResult">Outcome</span>
+                <button class="resetBtn">Reset</button>
+                <div class="container">
+                    <div id="playerOption"></div>
+                    <div id="computerOption"></div>
+                </div>
+            </div>    
+        </div>   
     <script src="main.js" defer></script>
 </body>
 </html>
