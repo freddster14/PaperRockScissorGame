@@ -23,19 +23,21 @@ let points = 0;
 let playerPoints = 0;
 let choose = '';
 let text = '';
-function getComputerChoice(text){
+let computerChoice = '';
+function getComputerChoice(){
     const optionsArray = ['Rock',  'Paper',  'Scissors'];
     return optionsArray[Math.floor(Math.random()*optionsArray.length)]
 }
-console.log(text)
+
 function hideBody(){
     let gameContainer = document.querySelector('.gameContainer');
     gameContainer.style.opacity = 0;
     gameContainer.style.transform = 'scale(0)';
     gameContainer.style.display = 'none';
 }
+
 function playRound(){ 
-    const computerChoice = getComputerChoice();
+    const computerChoice = displayComImg();
     const playerChoice = choose;
     if(playerChoice == 'Rock' && computerChoice == 'Paper') {
         currentPoints.textContent = ++points;
@@ -56,7 +58,9 @@ function playRound(){
         currentResult.textContent = ++playerPoints
         outcome.textContent = "You win!"
    }
+   
 }
+
 
 const info5 = document.querySelector(".info");
 function removeBest(){
@@ -64,25 +68,28 @@ function removeBest(){
 }
 const computerOutcome = document.querySelector('#computerOption')
 function displayComImg(){
-    if('Rock'){
-        let img = document.createElement('img');
-        img.src = "images/rock.png";
-        img.id = "rock"
-        playerOutcome.appendChild(img)
-    }else if('Paper'){
-        let img = document.createElement('img');
-        img.src = "images/paper.png";
-        img.id = "paper"
-        playerOutcome.appendChild(img)
-    }else if ('Scissors'){
-        let img = document.createElement('img');
-        img.src = "images/scissors.png";
-        img.id = "scissors"
-        playerOutcome.appendChild(img)
+    const computerChoice = getComputerChoice()
+    if(computerChoice == 'Rock'){
+        let img2 = document.createElement('img');
+        img2.src = "images/rock.png";
+        img2.id = "rock"
+        computerOutcome.appendChild(img2)
+    }else if(computerChoice == 'Paper'){
+        let img2 = document.createElement('img');
+        img2.src = "images/paper.png";
+        img2.id = "paper"
+        computerOutcome.appendChild(img2)
+    }else if (computerChoice == 'Scissors'){
+        let img2 = document.createElement('img');
+        img2.src = "images/scissors.png";
+        img2.id = "scissors"
+        computerOutcome.appendChild(img2)
     }
+    return computerChoice
 }
 const playerOutcome = document.querySelector('#playerOption')
 function displayImg(){
+    
     if(choose == 'Rock'){
         let img = document.createElement('img');
         img.src = "images/rock.png"; 

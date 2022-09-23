@@ -34,9 +34,6 @@ body{
     margin-top: 10px;
 }
 input{
-    font-size: 30px;
-    width: 100px;
-    height: 100px;
     transition: all 0.08s ease-in;
 }
 input:active{
@@ -45,39 +42,45 @@ input:active{
 .buttons{
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 14px;
     justify-content: center;
     margin-top: 15px;
     height: auto;
     width: auto;
 }
-#rock{
-    margin-left: 5px;
-    width: 115px;
-    height: 100px;
 
+.textResult{font-size: 25px;}
+input#rock{
+    margin-top: 10px;
+}
+input#scissors{
+    margin-top: 8px;
+}
+#rock{
+    width: 145px;
+    height: 115px;
+    margin: 0px -5px
 }
 #scissors{
     height: 115px;
-    margin-top: -10px;
     width: 100px;
+    margin: 0px 15px;
 }
-.textResult{font-size: 25px;}
-
 #paper{
-    width: 85px;
-    height: 85px;
+    margin: 20px;
+    height: 90px;
+    width: 90px;
 }
 .container{
     display: flex;
-    width: 250px;
-    
+    width: auto;
+    gap: 25px;
 }
-#playerOption{
+#playerOption, #computerOption{
     display: flex;
     flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-content: center;
     gap: 10px;
 }
 button{font-size: 25px; border-radius: 5px;}
