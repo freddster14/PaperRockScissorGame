@@ -1,5 +1,5 @@
 # PaperRockScissorGame
-Live Preview: [Click Here](https://freddster14.github.io/Battleship-Game/)
+Live Preview: [Click Here](https://freddster14.github.io/PaperRockScissorGame/)
 
 ## Description
 This is my first attempt of a Rock Paper Scissors Game(As of 8/29/2022). In the future I will be adding more complex aspects like an interface and UI.
